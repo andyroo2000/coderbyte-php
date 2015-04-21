@@ -1,6 +1,6 @@
 <?php
 
-class CoderByte
+class VowelCount
 {
 
     public function vowel_count($string)

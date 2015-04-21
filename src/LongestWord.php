@@ -3,7 +3,7 @@
 class LongestWord
 {
 
-    public function LongestWord($string)
+    public function longest_word($string)
     {
         return $string;
     }

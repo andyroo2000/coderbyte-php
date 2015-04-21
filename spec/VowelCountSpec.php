@@ -5,7 +5,7 @@ namespace spec;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class CoderByteSpec extends ObjectBehavior
+class VowelCountSpec extends ObjectBehavior
 {
     function it_returns_2_for_hello()
     {
