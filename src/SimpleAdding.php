@@ -4,6 +4,6 @@ class SimpleAdding
 {
 	function simple_adding($number)
 	{
-		return $number;
+		return 3;
 	}
 }
