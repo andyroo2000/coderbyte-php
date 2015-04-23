@@ -10,6 +10,12 @@ class CheckNums
 {
 	function check_nums($num1, $num2)
 	{
-		return true;
+		if ($num1 == $num2) {
+			return "-1";
+		} elseif ($num2 > $num1) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
