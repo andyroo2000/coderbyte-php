@@ -10,4 +10,14 @@ class SimpleAddingSpec extends ObjectBehavior
     {
     	$this->simple_adding(2)->shouldReturn(3);
     }
+
+	function it_returns_6_for_3()
+	{
+		$this->simple_adding(3)->shouldReturn(6);
+	}
+
+	function it_returns_78_for_12()
+	{
+		$this->simple_adding(12)->shouldReturn(78);
+	}
 }

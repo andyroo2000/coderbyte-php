@@ -4,6 +4,12 @@ class SimpleAdding
 {
 	function simple_adding($number)
 	{
-		return 3;
+		$total = null;
+
+		for ($i = 1; $i <= $number; $i++) {
+			$total += $i;
+		}
+
+		return $total;
 	}
 }
