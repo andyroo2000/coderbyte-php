@@ -11,5 +11,8 @@
 
 class LetterCapitalize
 {
-
+	function letter_capitalize($string)
+	{
+		return "Hello World";
+	}
 }

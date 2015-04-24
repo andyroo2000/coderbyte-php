@@ -7,8 +7,8 @@ use Prophecy\Argument;
 
 class LetterCapitalizeSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_returns_Hello_World_for_hello_world()
     {
-        $this->shouldHaveType('LetterCapitalize');
+        $this->letter_capitalize('hello world')->shouldReturn('Hello World');
     }
 }
