@@ -17,23 +17,17 @@ class LetterChangesSpec extends ObjectBehavior
 		$this->letter_changes('fun times!')->shouldReturn('gvO Ujnft!');
 	}
 
-	function  it_returns_b_for_a()
+	function  it_returns_the_next_letter()
 	{
 		$this->get_next_letter('a')->shouldReturn('b');
-	}
-
-	function  it_returns_c_for_b()
-	{
 		$this->get_next_letter('b')->shouldReturn('c');
-	}
-
-	function  it_returns_g_for_f()
-	{
 		$this->get_next_letter('f')->shouldReturn('g');
 	}
 
-	function it_returns_8_for_8()
+	function it_returns_non_alphabetic_characters_intact()
 	{
 		$this->get_next_letter('8')->shouldReturn("8");
+		$this->get_next_letter('*')->shouldReturn("*");
+		$this->get_next_letter('%')->shouldReturn("%");
 	}
 }

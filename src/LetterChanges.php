@@ -11,6 +11,7 @@ modified string.
 class LetterChanges
 {
 	const ALPHABET = "abcdefghijklmnopqrstuvqyza";
+	const ALPHABET_CAPITAL_VOWELS = "AbcdEfghIjklmnOpqrstUvqyzA";
 	const VOWELS = "aeiou";
 
 	function letter_changes($string)
@@ -27,6 +28,7 @@ class LetterChanges
 
 	function get_next_letter($letter) {
 		$characters = str_split(self::ALPHABET);
+		$characters_capital_vowels = str_split(self::ALPHABET_CAPITAL_VOWELS);
 
 		if (!in_array($letter, $characters)) {
 			return $letter;
@@ -34,6 +36,6 @@ class LetterChanges
 
 		$letter_index = array_search($letter, $characters);
 
-		return $characters[$letter_index + 1];
+		return $characters_capital_vowels[$letter_index + 1];
 	}
 }
