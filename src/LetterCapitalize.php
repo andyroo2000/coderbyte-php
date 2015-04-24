@@ -11,8 +11,31 @@
 
 class LetterCapitalize
 {
-	function letter_capitalize($string)
+	function capitalize_sentence($string)
 	{
-		return "Hello World";
+		$word_array = explode(" ", $string);
+		$word_array_capitalized = array();
+
+		foreach ($word_array as $word) {
+			$capitalized_word = $this->capitalize_word($word);
+			array_push($word_array_capitalized, $capitalized_word);
+		}
+
+		return implode(" ", $word_array_capitalized);
 	}
+
+	function capitalize_word($word)
+	{
+		$character_array = str_split($word);
+		$capitalized_word = array(strtoupper($character_array[0]));
+		$length_of_word = strlen($word);
+
+		for ($i = 1; $i < $length_of_word; $i++)
+		{
+			array_push($capitalized_word, $character_array[$i]);
+		}
+
+		return implode($capitalized_word);
+	}
+
 }
