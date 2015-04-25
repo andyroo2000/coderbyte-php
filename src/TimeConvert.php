@@ -12,4 +12,22 @@
 
 class TimeConvert
 {
+	function time_convert($number)
+	{
+		$hours = 0;
+
+		while ($number > 59) {
+			$this->get_hours($number, $hours);
+		}
+
+		$minutes = $number;
+
+		return $hours . ':' . $minutes;
+	}
+
+	function get_hours(&$number, &$hours)
+	{
+		$number -= 60;
+		$hours += 1;
+	}
 }
