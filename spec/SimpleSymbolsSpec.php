@@ -21,4 +21,9 @@ class SimpleSymbolsSpec extends ObjectBehavior
 		$this->surrounded_by($character_array, '2')->shouldReturn(false);
 	}
 
+	function it_returns_true_if_all_letters_are_surrounded()
+	{
+		$this->simple_symbols("+d+=3=+s+")->shouldReturn(true);
+	}
+
 }

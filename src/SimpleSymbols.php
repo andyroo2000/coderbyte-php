@@ -17,13 +17,26 @@
 
 class SimpleSymbols
 {
-	function surrounded_by($character_array, $index)
+	function simple_symbols($string)
 	{
-		if ($index < 1) {
-			return false;
+		$string_array = str_split($string);
+		$string_length = strlen($string);
+
+		for ($i = 1; $i < $string_length; $i++) {
+			$is_a_letter = preg_match("/[a-z,A-Z]/u", $string_array[$i]);
+			$not_surrounded_by_symbols = !$this->surrounded_by($string_array, $i);
+
+			if ($is_a_letter && $not_surrounded_by_symbols) {
+				return false;
+			}
 		}
 
-		if (($character_array[$index - 1] != '+') || ($character_array[$index + 1] != '+')) {
+		return true;
+	}
+
+	function surrounded_by($character_array, $index)
+	{
+		if ($index < 1 || $character_array[$index - 1] != '+' || $character_array[$index + 1] != '+') {
 			return false;
 		}
 
