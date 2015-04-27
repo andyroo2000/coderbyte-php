@@ -12,4 +12,8 @@
 
 class AlphabetSoup
 {
+	function alphabetize($string)
+	{
+		return $string;
+	}
 }

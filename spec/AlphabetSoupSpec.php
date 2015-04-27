@@ -7,8 +7,9 @@ use Prophecy\Argument;
 
 class AlphabetSoupSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_alphabetizes_strings()
     {
-        $this->shouldHaveType('AlphabetSoup');
+        $this->alphabetize('coderbyte')->shouldReturn('bcdeeorty');
+		$this->alphabetize('hooplah')->shouldReturn('ahhloop');
     }
 }
