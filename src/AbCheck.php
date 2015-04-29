@@ -16,6 +16,17 @@ class AbCheck
 {
 	function check($string)
 	{
+		$string_length = strlen($string);
+
+		for ($i = 0; $i < $string_length - 3; $i++)
+		{
+			if ($string[$i] === $string[$i + 3])
+			{
+				return true;
+			}
+		}
+
 		return false;
 	}
+
 }
