@@ -12,8 +12,25 @@
 
 class AlphabetSoup
 {
+	const ALPHABET = "abcdefghijklmnopqrstuvqyz";
+
 	function alphabetize($string)
 	{
-		return $string;
+		$alphabet = str_split(self::ALPHABET);
+		$string_characters = str_split($string);
+		$result = '';
+
+		foreach ($alphabet as $character)
+		{
+			foreach ($string_characters as $string_character)
+			{
+				if ($character === $string_character)
+				{
+					$result .= $character;
+				}
+			}
+		}
+
+		return $result;
 	}
 }
