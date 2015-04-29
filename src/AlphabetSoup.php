@@ -17,20 +17,24 @@ class AlphabetSoup
 	function alphabetize($string)
 	{
 		$alphabet = str_split(self::ALPHABET);
-		$string_characters = str_split($string);
+		$string_array = str_split($string);
 		$result = '';
 
-		foreach ($alphabet as $character)
+		foreach ($alphabet as $letter)
 		{
-			foreach ($string_characters as $string_character)
+			foreach ($string_array as $character)
 			{
-				if ($character === $string_character)
-				{
-					$result .= $character;
-				}
+				$result .= $this->return_character_matches($letter, $character);
 			}
 		}
 
 		return $result;
 	}
+
+	private function return_character_matches($character, $string_character) {
+		if ($character === $string_character) {
+			return $character;
+		}
+	}
+
 }
