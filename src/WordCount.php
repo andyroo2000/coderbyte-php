@@ -14,6 +14,7 @@ class WordCount
 {
 	function count($string)
 	{
-		return 2;
+		$word_array = explode(' ', $string);
+		return count($word_array);
 	}
 }
