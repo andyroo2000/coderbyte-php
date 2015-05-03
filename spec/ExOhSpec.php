@@ -11,4 +11,9 @@ class ExOhSpec extends ObjectBehavior
     {
         $this->x_and_o_are_equal('xooxxo')->shouldReturn(true);
     }
+
+	function it_returns_false_when_x_and_o_are_unequal()
+    {
+        $this->x_and_o_are_equal('x')->shouldReturn(false);
+    }
 }
