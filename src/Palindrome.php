@@ -14,6 +14,14 @@ class Palindrome
 {
 	function is_palindrome($string)
 	{
-		return true;
+		$stripped_string = implode(explode(' ', $string));
+		$stripped_string_reversed = strrev($stripped_string);
+
+		if ($stripped_string == $stripped_string_reversed)
+		{
+			return true;
+		}
+
+		return false;
 	}
 }
