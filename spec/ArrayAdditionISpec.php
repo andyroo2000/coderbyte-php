@@ -7,8 +7,10 @@ use Prophecy\Argument;
 
 class ArrayAdditionISpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_returns_the_largest_number()
     {
-        $this->shouldHaveType('ArrayAdditionI');
+        $this->largest_number(array(4, 6, 23, 10, 1, 3))->shouldReturn(23);
     }
+
+
 }

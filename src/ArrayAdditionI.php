@@ -14,5 +14,18 @@
 
 class ArrayAdditionI
 {
+	function largest_number($num_array)
+	{
+		$largest_number = $num_array[0];
 
+		foreach ($num_array as $current_number)
+		{
+			if ($current_number >= $largest_number)
+			{
+				$largest_number = $current_number;
+			}
+		}
+
+		return $largest_number;
+	}
 }
