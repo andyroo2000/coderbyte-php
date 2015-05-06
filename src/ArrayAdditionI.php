@@ -14,18 +14,43 @@
 
 class ArrayAdditionI
 {
-	function largest_number($num_array)
-	{
-		$largest_number = $num_array[0];
 
-		foreach ($num_array as $current_number)
+	function combination_equals_largest_number($num_array)
+	{
+		sort($num_array);
+		$largest_number = array_pop($num_array);
+
+		for ($i = sizeof($num_array) - 1; $i >= 0; $i--)
 		{
-			if ($current_number >= $largest_number)
-			{
-				$largest_number = $current_number;
-			}
+			if ($num_array) {};
 		}
+
 
 		return $largest_number;
 	}
+
+	// [20, 15, 13, 2]
+	// 20 + 15 + 13 + 2
+	// 20 + 15 + 13
+	// 20 + 15 + 2
+	// 20 + 13 + 2
+	// 20 + 2
+
+
+	// 0, 1, 2
+	// 0, 1,
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
